@@ -1,0 +1,13 @@
+language: perl
+perl:
+  - "5.10"
+
+script: "cd ./mailroute-api; perl ./Makefile.PL; make test"
+
+notifications:
+  recipients:
+    - devrow@gmail.com
+    - aldarund@gmail.com
+  email:
+    on_success: change
+    on_failure: always
